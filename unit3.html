@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>इकाई III: सीखने के सिद्धांत और शैक्षिक निहितार्थ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 30px 20px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+        }
+        
+        .unit-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .content-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .content-card h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content-card h2 i {
+            color: var(--secondary-color);
+        }
+        
+        .theory-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--warning-color);
+        }
+        
+        .theory-card h3 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .theory-type {
+            font-size: 0.8rem;
+            background-color: var(--light-color);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        
+        .experiment {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .implication {
+            background-color: #e8f7ee;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid var(--success-color);
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background-color: #fff9e6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+        
+        .sidebar {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .theories-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .theories-list li {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .theories-list li:hover {
+            background-color: #e8f4fc;
+            transform: translateX(5px);
+        }
+        
+        .theories-list a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            display: block;
+        }
+        
+        .theory-icon {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        .transfer-box {
+            background: linear-gradient(135deg, #f8f9fa, #e8f4fc);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+        
+        .transfer-types {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .transfer-type {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .positive {
+            background-color: #d5f4e6;
+            border: 2px solid #27ae60;
+        }
+        
+        .negative {
+            background-color: #fadbd8;
+            border: 2px solid #e74c3c;
+        }
+        
+        .zero {
+            background-color: #f4f6f6;
+            border: 2px solid #7f8c8d;
+        }
+        
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--primary-color), #34495e);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .conclusion-box h2 {
+            color: white;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #7f8c8d;
+            border-top: 1px solid #ecf0f1;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .nav-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .pavlov-diagram {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .transfer-types {
+                flex-direction: column;
+            }
+            
+            .nav-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1><i class="fas fa-graduation-cap"></i> इकाई III: सीखने के सिद्धांत और शैक्षिक निहितार्थ</h1>
+            <p class="subtitle">यह इकाई 'सीखने' (अधिगम) की प्रक्रिया और कक्षा में उसे लागू करने के तरीकों पर केंद्रित है। विभिन्न सिद्धांतों के माध्यम से समझें कि बच्चे कैसे सीखते हैं और शिक्षक कैसे सहायता कर सकते हैं।</p>
+            <div class="unit-badge">Learning Theories & Educational Implications</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="content-section">
+                <div class="content-card">
+                    <h2><i class="fas fa-lightbulb"></i> अधिगम/सीखना: अवधारणा</h2>
+                    <p><span class="highlight">अधिगम</span> अनुभव और अभ्यास के कारण व्यवहार में आने वाला <span class="highlight">अपेक्षाकृत स्थायी परिवर्तन</span> है। यह परिवर्तन किसी भी प्रकार का - ज्ञानात्मक, भावात्मक या कौशलात्मक - हो सकता है।</p>
+                    
+                    <h3 style="margin-top: 20px; color: var(--primary-color);">सीखने की प्रकृति:</h3>
+                    <ul>
+                        <li>यह जीवन भर चलने वाली प्रक्रिया है (लाइफलॉन्ग प्रोसेस)</li>
+                        <li>यह लक्ष्य-निर्देशित एवं उद्देश्यपूर्ण होती है</li>
+                        <li>यह सकारात्मक या नकारात्मक दोनों हो सकती है</li>
+                        <li>यह व्यक्ति को पर्यावरण के साथ समायोजन में सहायता करती है</li>
+                        <li>इसमें व्यवहार में परिवर्तन अनुभव के कारण होता है, परिपक्वता के कारण नहीं</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h2><i class="fas fa-theater-masks"></i> प्रमुख अधिगम सिद्धांत</h2>
+                    <p>सीखने की प्रक्रिया को समझने के लिए विद्वानों ने विभिन्न सिद्धांत प्रस्तुत किए हैं। ये मुख्यतः दो श्रेणियों में आते हैं: <span class="highlight">व्यवहारवादी (Behaviorist)</span> और <span class="highlight">संज्ञानात्मक (Cognitive)</span> सिद्धांत।</p>
+                </div>
+                
+                <div class="theory-card">
+                    <h3>थार्नडाइक का 'प्रयास और त्रुटि' सिद्धांत <span class="theory-type">व्यवहारवादी</span></h3>
+                    
+                    <div class="experiment">
+                        <h4><i class="fas fa-flask"></i> प्रयोग:</h4>
+                        <p>थार्नडाइक ने एक भूखी बिल्ली को 'पज़ल बॉक्स' में रखा। बिल्ली ने बाहर निकलने के लिए कई गलत प्रयास किए, लेकिन अंत में संयोग से लीवर दब गया और उसे भोजन मिल गया। बार-बार अभ्यास करने से उसने सही तरीका सीख लिया।</p>
+                    </div>
+                    
+                    <h4>मुख्य नियम (Laws of Learning):</h4>
+                    <ul>
+                        <li><span class="highlight">तत्परता का नियम:</span> जब तक बच्चा सीखने के लिए मानसिक रूप से तैयार नहीं है, आप उसे नहीं सीखा सकते।</li>
+                        <li><span class="highlight">अभ्यास का नियम:</span> "करत-करत अभ्यास के..." यानी बार-बार दोहराने से सीखना पक्का होता है।</li>
+                        <li><span class="highlight">प्रभाव का नियम:</span> यदि सीखने का परिणाम सुखद (इनाम) है, तो बच्चा दोबारा सीखेगा; यदि दुखद (सजा) है, तो वह बचेगा।</li>
+                    </ul>
+                    
+                    <div class="implication">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> शैक्षिक निहितार्थ:</h4>
+                        <p>कक्षा में बच्चों को प्रेरित करना, पूर्व ज्ञान से जोड़ना और बार-बार अभ्यास कराना। शिक्षक को बच्चों की तत्परता का ध्यान रखते हुए पाठ प्रस्तुत करना चाहिए।</p>
+                    </div>
+                </div>
+                
+                <div class="theory-card">
+                    <h3>पावलोव का 'शास्त्रीय अनुबंधन' <span class="theory-type">व्यवहारवादी</span></h3>
+                    
+                    <div class="experiment">
+                        <h4><i class="fas fa-flask"></i> प्रयोग:</h4>
+                        <p>पावलोव ने कुत्ते पर प्रयोग किया:</p>
+                        <ol>
+                            <li>भोजन (स्वाभाविक उद्दीपक) → लार आना (स्वाभाविक अनुक्रिया)</li>
+                            <li>घंटी + भोजन → लार आना</li>
+                            <li>केवल घंटी (कृत्रिम उद्दीपक) → लार आना (अनुबंधित अनुक्रिया)</li>
+                        </ol>
+                        
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pavlov%27s_dog_conditioning.svg/500px-Pavlov%27s_dog_conditioning.svg.png" alt="पावलोव का शास्त्रीय अनुबंधन आरेख" class="pavlov-diagram">
+                        <p style="text-align: center; font-style: italic; margin-top: 5px; font-size: 0.9rem;">पावलोव के शास्त्रीय अनुबंधन का आरेख</p>
+                    </div>
+                    
+                    <p><span class="highlight">सिद्धांत:</span> जब किसी स्वाभाविक उद्दीपक (जैसे भोजन) के साथ कोई तटस्थ उद्दीपक (जैसे घंटी) बार-बार दिया जाता है, तो तटस्थ उद्दीपक से भी वही प्रतिक्रिया होने लगती है।</p>
+                    
+                    <div class="implication">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> शैक्षिक निहितार्थ:</h4>
+                        <ul>
+                            <li>अच्छी आदतों का निर्माण (सफाई, समयपालन)</li>
+                            <li>डर को दूर करना (जैसे गणित या मंच के डर को सकारात्मक माहौल से जोड़कर हटाना)</li>
+                            <li>शिक्षण को रोचक बनाना ताकि छात्रों का ध्यान बना रहे</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="theory-card">
+                    <h3>बी.एफ. स्किनर का 'क्रियाप्रसूत अनुबंधन' <span class="theory-type">व्यवहारवादी</span></h3>
+                    
+                    <div class="experiment">
+                        <h4><i class="fas fa-flask"></i> प्रयोग:</h4>
+                        <p>स्किनर ने चूहे और कबूतर पर 'स्किनर बॉक्स' में प्रयोग किया। जब चूहा लीवर दबाता, तो उसे भोजन मिलता। इससे चूहे ने लीवर दबाना सीख लिया।</p>
+                    </div>
+                    
+                    <p><span class="highlight">सिद्धांत:</span> सीखना परिणाम पर निर्भर करता है। <span class="highlight">पुनर्बलन (Reinforcement)</span> व्यवहार को बढ़ाता है:</p>
+                    <ul>
+                        <li><span class="highlight">सकारात्मक पुनर्बलन:</span> इनाम देकर व्यवहार बढ़ाना</li>
+                        <li><span class="highlight">नकारात्मक पुनर्बलन:</span> अप्रिय चीज हटाकर व्यवहार बढ़ाना</li>
+                        <li><span class="highlight">दंड:</span> अप्रिय परिणाम देकर व्यवहार कम करना</li>
+                    </ul>
+                    
+                    <div class="implication">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> शैक्षिक निहितार्थ:</h4>
+                        <ul>
+                            <li>कक्षा में सही उत्तर देने पर शाबाशी या पुरस्कार देना</li>
+                            <li>'अभिक्रमित अनुदेशन' (Programmed Learning) - विषय को छोटे-छोटे चरणों में बांटकर सीखना</li>
+                            <li>तत्काल प्रतिपुष्टि (Feedback) देना</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="theory-card">
+                    <h3>कोहलर का 'अंतर्दृष्टि/सूझ का सिद्धांत' <span class="theory-type">संज्ञानात्मक</span></h3>
+                    
+                    <div class="experiment">
+                        <h4><i class="fas fa-flask"></i> प्रयोग:</h4>
+                        <p>'सुल्तान' नामक चिम्पांजी पर। उसने पिंजरे में रखी छड़ियों को जोड़कर और बक्से रखकर ऊँचाई पर लटके केले प्राप्त किए। उसे अचानक समस्या का हल सूझ गया।</p>
+                    </div>
+                    
+                    <p><span class="highlight">सिद्धांत:</span> सीखना केवल रटने या अभ्यास से नहीं होता, बल्कि <span class="highlight">'सूझ' (Insight)</span> और बुद्धि के प्रयोग से अचानक समस्या का समाधान मिलता है। गेस्टाल्ट सिद्धांत के अनुसार, हमें पूरी स्थिति (Whole) को समझना होता है।</p>
+                    
+                    <div class="implication">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> शैक्षिक निहितार्थ:</h4>
+                        <ul>
+                            <li>समस्या समाधान विधि (Problem Solving Method) का प्रयोग</li>
+                            <li>छात्रों को रटने के बजाय समझने और तर्क करने के लिए प्रेरित करना</li>
+                            <li>ज्ञान को संपूर्ण रूप में प्रस्तुत करना, टुकड़ों में नहीं</li>
+                            <li>सीखने के लिए समृद्ध वातावरण तैयार करना</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="theory-card">
+                    <h3>अल्बर्ट बंडुरा का 'सामाजिक अधिगम सिद्धांत' <span class="theory-type">संज्ञानात्मक-सामाजिक</span></h3>
+                    
+                    <p><span class="highlight">सिद्धांत:</span> बच्चे दूसरों को देखकर (Observation) और उनकी नकल (Imitation) करके सीखते हैं। इसे <span class="highlight">'मॉडलिंग'</span> या 'अनुकरण द्वारा सीखना' कहते हैं।</p>
+                    
+                    <h4>सीखने के चरण:</h4>
+                    <ol>
+                        <li><span class="highlight">ध्यान (Attention):</span> मॉडल पर ध्यान देना</li>
+                        <li><span class="highlight">धारण (Retention):</span> देखे गए व्यवहार को याद रखना</li>
+                        <li><span class="highlight">पुनरुत्पादन (Reproduction):</span> देखे गए व्यवहार को दोहराना</li>
+                        <li><span class="highlight">अभिप्रेरणा (Motivation):</span> व्यवहार दोहराने के लिए प्रेरित होना</li>
+                    </ol>
+                    
+                    <div class="implication">
+                        <h4><i class="fas fa-chalkboard-teacher"></i> शैक्षिक निहितार्थ:</h4>
+                        <ul>
+                            <li>शिक्षक का व्यवहार आदर्श होना चाहिए क्योंकि छात्र शिक्षक का अनुकरण करते हैं</li>
+                            <li>अच्छे मॉडल्स (रोल मॉडल) प्रस्तुत करना</li>
+                            <li>सामूहिक गतिविधियों द्वारा सीखने को बढ़ावा देना</li>
+                            <li>मीडिया के प्रभाव को समझना और नियंत्रित करना</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2><i class="fas fa-exchange-alt"></i> अधिगम का स्थानांतरण (Transfer of Learning)</h2>
+                    <p>जब एक स्थिति में सीखा गया ज्ञान दूसरी स्थिति में काम आता है (या बाधा डालता है), तो उसे अधिगम का स्थानांतरण कहते हैं।</p>
+                    
+                    <div class="transfer-box">
+                        <h3 style="color: var(--primary-color); margin-top: 0;">स्थानांतरण के प्रकार</h3>
+                        
+                        <div class="transfer-types">
+                            <div class="transfer-type positive">
+                                <h4><i class="fas fa-plus-circle"></i> सकारात्मक</h4>
+                                <p>पहले सीखा गया ज्ञान नई स्थिति में सहायक होता है।</p>
+                                <p><strong>उदाहरण:</strong> साइकिल चलाना सीखने के बाद बाइक चलाना आसान होना।</p>
+                            </div>
+                            
+                            <div class="transfer-type negative">
+                                <h4><i class="fas fa-minus-circle"></i> नकारात्मक</h4>
+                                <p>पहले सीखा गया ज्ञान नई स्थिति में बाधा डालता है।</p>
+                                <p><strong>उदाहरण:</strong> हिंदी टाइपिंग सीखने के बाद अंग्रेजी टाइपिंग में उंगलियों का गलत जगह जाना।</p>
+                            </div>
+                            
+                            <div class="transfer-type zero">
+                                <h4><i class="fas fa-ban"></i> शून्य</h4>
+                                <p>पहले सीखे गए ज्ञान का नई स्थिति पर कोई प्रभाव नहीं पड़ता।</p>
+                                <p><strong>उदाहरण:</strong> इतिहास के ज्ञान का गणित सीखने पर कोई प्रभाव न पड़ना।</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conclusion-box">
+                    <h2><i class="fas fa-star"></i> शिक्षक के लिए निष्कर्ष</h2>
+                    <p>इकाई III शिक्षक को यह सिखाती है कि हर बच्चा अलग तरीके से सीखता है। कभी अभ्यास की जरूरत होती है (थार्नडाइक), कभी इनाम की (स्किनर), तो कभी समझ विकसित करने की (कोहलर)। एक सफल शिक्षक इन सभी सिद्धांतों का मिश्रण अपनी कक्षा में उपयोग करता है और प्रत्येक छात्र की आवश्यकताओं के अनुसार शिक्षण विधियों को अनुकूलित करता है।</p>
+                </div>
+                
+                <div class="nav-buttons">
+                    <a href="unit2.html" class="nav-button"><i class="fas fa-arrow-left"></i> पिछली इकाई (Unit II)</a>
+                    <a href="unit4.html" class="nav-button">अगली इकाई (Unit IV) <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <h3><i class="fas fa-list-ol"></i> सीखने के सिद्धांत</h3>
+                <ul class="theories-list">
+                    <li><a href="#"><i class="fas fa-paw theory-icon"></i> थार्नडाइक - प्रयास और त्रुटि</a></li>
+                    <li><a href="#"><i class="fas fa-bell theory-icon"></i> पावलोव - शास्त्रीय अनुबंधन</a></li>
+                    <li><a href="#"><i class="fas fa-mouse theory-icon"></i> स्किनर - क्रियाप्रसूत अनुबंधन</a></li>
+                    <li><a href="#"><i class="fas fa-brain theory-icon"></i> कोहलर - अंतर्दृष्टि सिद्धांत</a></li>
+                    <li><a href="#"><i class="fas fa-users theory-icon"></i> बंडुरा - सामाजिक अधिगम</a></li>
+                </ul>
+                
+                <h3 style="margin-top: 30px;"><i class="fas fa-book-open"></i> मुख्य अवधारणाएँ</h3>
+                <ul>
+                    <li>अधिगम की परिभाषा</li>
+                    <li>व्यवहारवादी सिद्धांत</li>
+                    <li>संज्ञानात्मक सिद्धांत</li>
+                    <li>पुनर्बलन के प्रकार</li>
+                    <li>अधिगम स्थानांतरण</li>
+                    <li>शैक्षिक निहितार्थ</li>
+                </ul>
+                
+                <div style="margin-top: 30px; padding: 15px; background-color: #f0f7ff; border-radius: 8px;">
+                    <h4><i class="fas fa-lightbulb"></i> शिक्षण सुझाव</h4>
+                    <p>विभिन्न सिद्धांतों के अनुसार, शिक्षक को:</p>
+                    <ul style="font-size: 0.9rem;">
+                        <li>बच्चों की तत्परता का ध्यान रखना</li>
+                        <li>सकारात्मक पुनर्बलन देना</li>
+                        <li>समस्या-समाधान को प्रोत्साहित करना</li>
+                        <li>स्वयं आदर्श व्यवहार प्रस्तुत करना</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>इकाई III: सीखने के सिद्धांत और शैक्षिक निहितार्थ | शिक्षा मनोविज्ञान</p>
+            <p>© शैक्षिक संसाधन | सभी अधिकार सुरक्षित</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Highlight current theory when clicked in sidebar
+        const theoryLinks = document.querySelectorAll('.theories-list a');
+        theoryLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                theoryLinks.forEach(l => l.parentElement.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.parentElement.classList.add('active');
+                
+                // Get theory name from link text
+                const theoryName = this.textContent.split('-')[1].trim();
+                
+                // Find and scroll to corresponding theory card
+                const theoryCards = document.querySelectorAll('.theory-card h3');
+                for(let card of theoryCards) {
+                    if(card.textContent.includes(theoryName)) {
+                        card.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        
+                        // Add temporary highlight
+                        card.parentElement.style.boxShadow = '0 0 0 3px rgba(52, 152, 219, 0.3)';
+                        setTimeout(() => {
+                            card.parentElement.style.boxShadow = '';
+                        }, 2000);
+                        break;
+                    }
+                }
+            });
+        });
+        
+        // Add animation to theory cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Apply animation to theory cards
+        document.querySelectorAll('.theory-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

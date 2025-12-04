@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Deeva Psychology</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Deeva<span>Psychology</span></h1>
+                <p>Smart Study for B.Ed. Exams</p>
+            </div>
+            
+            <div class="login-form">
+                <h2>Welcome to Deeva</h2>
+                <p>Let's study together!</p>
+                
+                <div class="form-group">
+                    <label for="name">
+                        <i class="fas fa-user"></i> Full Name
+                    </label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">
+                        <i class="fas fa-phone"></i> Phone Number
+                    </label>
+                    <input type="tel" id="phone" placeholder="Enter phone number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <input type="password" id="password" placeholder="Create password" required>
+                    <button type="button" class="show-password" onclick="togglePassword()">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                
+                <button class="login-btn" onclick="login()">
+                    <i class="fas fa-sign-in-alt"></i> Start Learning
+                </button>
+                
+                <div class="guest-option">
+                    <p>or</p>
+                    <button class="guest-btn" onclick="loginAsGuest()">
+                        <i class="fas fa-user-clock"></i> Continue as Guest
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword() {
+            const password = document.getElementById('password');
+            const eye = document.querySelector('.show-password i');
+            if (password.type === 'password') {
+                password.type = 'text';
+                eye.className = 'fas fa-eye-slash';
+            } else {
+                password.type = 'password';
+                eye.className = 'fas fa-eye';
+            }
+        }
+
+        function login() {
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value;
+            
+            if (!name || !phone || !password) {
+                alert('Please fill all fields');
+                return;
+            }
+            
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters');
+                return;
+            }
+            
+            // Store user info
+            const user = {
+                name: name,
+                phone: phone,
+                timestamp: new Date().toISOString()
+            };
+            
+            localStorage.setItem('deevaUser', JSON.stringify(user));
+            
+            // Show welcome animation
+            showWelcome(name);
+        }
+
+        function loginAsGuest() {
+            const user = {
+                name: 'Guest User',
+                phone: 'Not provided',
+                timestamp: new Date().toISOString(),
+                isGuest: true
+            };
+            
+            localStorage.setItem('deevaUser', JSON.stringify(user));
+            showWelcome('Guest');
+        }
+
+        function showWelcome(name) {
+            document.querySelector('.login-container').innerHTML = `
+                <div class="welcome-screen">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h2>Hello ${name}!</h2>
+                        <p>Welcome to Deeva Psychology</p>
+                        <p class="subtext">Let's study together</p>
+                        <div class="loader"></div>
+                        <p class="loading-text">Preparing your dashboard...</p>
+                    </div>
+                </div>
+            `;
+            
+            setTimeout(() => {
+                window.location.href = 'dashboard.html';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit II - Deeva Psychology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Deeva<span>Psychology</span></h1>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="units.html"><i class="fas fa-book-open"></i> Units</a>
+                <a href="unit1.html">Unit I</a>
+                <a href="unit3.html">Unit III</a>
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div>
+                        <div class="user-name" id="userName">User</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="unit-header">
+        <h1>Unit II: बाल विकास के सिद्धांत</h1>
+        <p>Child Development Theories - Piaget, Freud, Vygotsky</p>
+    </div>
+
+    <div class="unit-content">
+        <div class="content-tabs">
+            <button class="tab-btn active" data-tab="smart">Smart Study</button>
+            <button class="tab-btn" data-tab="detailed">Detailed Theory</button>
+            <button class="tab-btn" data-tab="practice">Practice</button>
+        </div>
+        
+        <!-- Smart Study Tab -->
+        <div id="smart-tab" class="tab-content active">
+            <div class="content-grid">
+                <!-- Paragraph Card -->
+                <div class="study-card paragraph">
+                    <div class="card-title">
+                        <i class="fas fa-paragraph"></i>
+                        <h3>Paragraph (विवरण)</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>बच्चा जैसे-जैसे बड़ा होता है, उसकी सोच और समझ बदलती है। <strong>जीन प्याजे</strong> ने कहा कि बच्चे उम्र के साथ सीखते हैं (Stages), जबकि <strong>वायगोत्स्की</strong> ने कहा कि बच्चे समाज और भाषा से सीखते हैं। <strong>फ्रायड</strong> ने मन की दबी हुई इच्छाओं (अचेतन मन) पर जोर दिया।</p>
+                        <p style="margin-top: 15px;">Child development is a continuous process of growth and change. <strong>Piaget</strong> emphasized cognitive stages, <strong>Vygotsky</strong> focused on social interaction, and <strong>Freud</strong> highlighted unconscious drives. Understanding these theories helps teachers create age-appropriate learning experiences and support children's holistic development.</p>
+                    </div>
+                </div>
+                
+                <!-- Piaget's Stages Card -->
+                <div class="study-card keypoints">
+                    <div class="card-title">
+                        <i class="fas fa-user-circle"></i>
+                        <h3>जीन प्याजे - संज्ञानात्मक विकास</h3>
+                    </div>
+                    <div class="card-body">
+                        <div style="margin: 20px 0; text-align: center;">
+                            <div style="font-size: 2.5rem; font-weight: 800; color: #f72585; margin-bottom: 15px;">
+                                "SPCF"
+                            </div>
+                            <p style="color: #666; font-style: italic;">(स-पू-मू-अ)</p>
+                        </div>
+                        
+                        <div style="margin: 25px 0;">
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed #ddd;">
+                                <div style="width: 40px; height: 40px; background: #f72585; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">S</div>
+                                <div>
+                                    <strong>Sensorimotor (संवेदी पेशीय)</strong>
+                                    <p style="color: #555; margin-top: 5px; font-size: 0.95rem;">0-2 वर्ष - इंद्रियों से सीखना, वस्तु स्थायित्व का विकास</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed #ddd;">
+                                <div style="width: 40px; height: 40px; background: #4361ee; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">P</div>
+                                <div>
+                                    <strong>Pre-operational (पूर्व-संक्रियात्मक)</strong>
+                                    <p style="color: #555; margin-top: 5px; font-size: 0.95rem;">2-7 वर्ष - खिलौनों की आयु, स्वकेंद्रित सोच, संकेतों का उपयोग</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px dashed #ddd;">
+                                <div style="width: 40px; height: 40px; background: #4cc9f0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">C</div>
+                                <div>
+                                    <strong>Concrete Operational (मूर्त संक्रियात्मक)</strong>
+                                    <p style="color: #555; margin-top: 5px; font-size: 0.95rem;">7-11 वर्ष - तर्क करना शुरू, संरक्षण समझ, वर्गीकरण</p>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                                <div style="width: 40px; height: 40px; background: #2a9d8f; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; flex-shrink: 0;">F</div>
+                                <div>
+                                    <strong>Formal Operational (अमूर्त संक्रियात्मक)</strong>
+                                    <p style="color: #555; margin-top: 5px; font-size: 0.95rem;">11+ वर्ष - बिना देखे चिंतन, परिकल्पना परीक्षण, अमूर्त विचार</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="font-style: italic; color: #666; padding-top: 20px; border-top: 1px solid #ddd;">
+                            <strong>Key Point:</strong> बच्चे 'नन्हे वैज्ञानिक' हैं जो खुद ज्ञान का निर्माण करते हैं।
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Freud's Structure Card -->
+                <div class="study-card tricks">
+                    <div class="card-title">
+                        <i class="fas fa-chess-board"></i>
+                        <h3>फ्रायड - मन की संरचना</h3>
+                    </div>
+                    <div class="card-body" style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 800; color: #f72585; margin: 20px 0;">
+                            "IES"
+                        </div>
+                        <p style="color: #666; font-style: italic; margin-bottom: 25px;">(राक्षस - इंसान - भगवान)</p>
+                        
+                        <div style="display: grid; gap: 20px; margin-top: 30px;">
+                            <div style="background: linear-gradient(135deg, #ff6b9d, #f72585); padding: 20px; border-radius: 10px; color: white; text-align: left;">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">I</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Id (इदम्)</h4>
+                                        <p style="opacity: 0.9; font-size: 0.95rem;">राक्षसी प्रवृत्ति - "मुझे अभी चाहिए" (pleasure principle)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, #4895ef, #4361ee); padding: 20px; border-radius: 10px; color: white; text-align: left;">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">E</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">Ego (अहम्)</h4>
+                                        <p style="opacity: 0.9; font-size: 0.95rem;">इंसान - संतुलन बनाता है (reality principle)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div style="background: linear-gradient(135deg, #2a9d8f, #4cc9f0); padding: 20px; border-radius: 10px; color: white; text-align: left;">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">S</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 5px;">SuperEgo (पराहम्)</h4>
+                                        <p style="opacity: 0.9; font-size: 0.95rem;">भगवान/ऋषि - नैतिकता, क्या सही है (morality principle)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Key Points -->
+            <div class="study-card" style="margin-top: 30px;">
+                <div class="card-title">
+                    <i class="fas fa-key"></i>
+                    <h3>Additional Key Points</h3>
+                </div>
+                <div class="card-body">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 20px;">
+                        <div>
+                            <h4 style="color: #f72585; margin-bottom: 10px;">वायगोत्स्की (Vygotsky)</h4>
+                            <ul style="list-style: none; padding-left: 10px;">
+                                <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                    <strong>ZPD:</strong> समीपस्थ विकास का क्षेत्र (Zone of Proximal Development)
+                                </li>
+                                <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                    बच्चे समाज और बड़ों के साथ अंतःक्रिया करके सीखते हैं
+                                </li>
+                                <li style="padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                    भाषा सीखने और सोचने का मुख्य साधन
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 style="color: #4361ee; margin-bottom: 10px;">एरिक्सन (Erikson)</h4>
+                            <ul style="list-style: none; padding-left: 10px;">
+                                <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #4361ee; font-size: 0.8rem;"></i>
+                                    मनोसामाजिक सिद्धांत (8 stages)
+                                </li>
+                                <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #4361ee; font-size: 0.8rem;"></i>
+                                    प्रत्येक चरण में एक संघर्ष (जैसे: विश्वास बनाम अविश्वास)
+                                </li>
+                                <li style="padding-left: 20px; position: relative;">
+                                    <i class="fas fa-circle" style="position: absolute; left: 0; color: #4361ee; font-size: 0.8rem;"></i>
+                                    जीवन भर विकास का महत्व
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Theory Tab -->
+        <div id="detailed-tab" class="tab-content">
+            <div class="study-card">
+                <h3 style="color: #f72585; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-chart-line"></i> वृद्धि और विकास (Growth and Development)
+                </h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 25px 0;">
+                    <div style="background: #f0f4ff; padding: 25px; border-radius: 10px;">
+                        <h4 style="color: #4361ee; margin-bottom: 15px;">वृद्धि (Growth)</h4>
+                        <ul style="list-style: none; padding-left: 10px;">
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #4361ee;"></i>
+                                शारीरिक परिवर्तन जो मापे जा सकते हैं
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #4361ee;"></i>
+                                जैसे ऊंचाई, वजन, शारीरिक आकार
+                            </li>
+                            <li style="padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #4361ee;"></i>
+                                यह एक समय बाद रुक जाती है
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f9f0ff; padding: 25px; border-radius: 10px;">
+                        <h4 style="color: #f72585; margin-bottom: 15px;">विकास (Development)</h4>
+                        <ul style="list-style: none; padding-left: 10px;">
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #f72585;"></i>
+                                यह जीवन भर चलने वाली प्रक्रिया है
+                            </li>
+                            <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #f72585;"></i>
+                                शारीरिक, मानसिक और सामाजिक सभी प्रकार के परिवर्तन
+                            </li>
+                            <li style="padding-left: 20px; position: relative;">
+                                <i class="fas fa-arrow-right" style="position: absolute; left: 0; color: #f72585;"></i>
+                                गुणात्मक परिवर्तन (quality changes)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: #fff9e6; padding: 25px; border-radius: 10px; margin: 25px 0; border-left: 4px solid #f8961e;">
+                    <h4 style="color: #f8961e; margin-bottom: 15px;">कारक (Factors)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div>
+                            <h5 style="color: #f8961e; margin-bottom: 10px;">आनुवंशिक (Genetic)</h5>
+                            <p style="color: #555;">जो गुण माता-पिता से मिलते हैं। ये जन्मजात होते हैं और विकास की दिशा तय करते हैं।</p>
+                        </div>
+                        <div>
+                            <h5 style="color: #f8961e; margin-bottom: 10px;">पर्यावरण (Environmental)</h5>
+                            <p style="color: #555;">आस-पास का माहौल, पोषण, स्कूल, सामाजिक सम्बन्ध। ये विकास की गति को प्रभावित करते हैं।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="study-card">
+                <h3 style="color: #f72585; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-theater-masks"></i> प्रमुख विकास के सिद्धांत (Theories of Development)
+                </h3>
+                
+                <!-- Piaget Detailed -->
+                <div style="background: #f0f7ff; padding: 25px; border-radius: 10px; margin-bottom: 25px; border-left: 4px solid #4361ee;">
+                    <h4 style="color: #4361ee; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-user-circle"></i> जीन प्याजे का संज्ञानात्मक विकास
+                    </h4>
+                    <p style="margin-bottom: 15px;">प्याजे ने बताया कि बच्चे ज्ञान का निर्माण खुद करते हैं (Constructivism)। उन्होंने 4 चरण बताए:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                            <div style="font-weight: bold; color: #4361ee; margin-bottom: 8px;">1. संवेदी-पेशीय</div>
+                            <div style="font-size: 0.9rem; color: #666;">0-2 वर्ष</div>
+                            <p style="font-size: 0.85rem; color: #555; margin-top: 8px;">इंद्रियों और शारीरिक क्रियाओं के माध्यम से दुनिया को समझना</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                            <div style="font-weight: bold; color: #4361ee; margin-bottom: 8px;">2. पूर्व-संक्रियात्मक</div>
+                            <div style="font-size: 0.9rem; color: #666;">2-7 वर्ष</div>
+                            <p style="font-size: 0.85rem; color: #555; margin-top: 8px;">भाषा विकास, स्वकेंद्रित सोच, संकेतों का उपयोग</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                            <div style="font-weight: bold; color: #4361ee; margin-bottom: 8px;">3. मूर्त संक्रियात्मक</div>
+                            <div style="font-size: 0.9rem; color: #666;">7-11 वर्ष</div>
+                            <p style="font-size: 0.85rem; color: #555; margin-top: 8px;">तार्किक सोच, संरक्षण की समझ, वर्गीकरण</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05);">
+                            <div style="font-weight: bold; color: #4361ee; margin-bottom: 8px;">4. अमूर्त संक्रियात्मक</div>
+                            <div style="font-size: 0.9rem; color: #666;">11+ वर्ष</div>
+                            <p style="font-size: 0.85rem; color: #555; margin-top: 8px;">अमूर्त चिंतन, परिकल्पना परीक्षण, वैज्ञानिक सोच</p>
+                        </div>
+                    </div>
+                    
+                    <p style="font-style: italic; color: #666; margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ddd;">
+                        <strong>महत्वपूर्ण अवधारणाएँ:</strong> अनुकूलन (Adaptation), आत्मसात्करण (Assimilation), समायोजन (Accommodation), संतुलन (Equilibrium)
+                    </p>
+                </div>
+                
+                <!-- Vygotsky Detailed -->
+                <div style="background: #f9f0ff; padding: 25px; border-radius: 10px; margin-bottom: 25px; border-left: 4px solid #f72585;">
+                    <h4 style="color: #f72585; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-comments"></i> वायगोत्स्की (Vygotsky)
+                    </h4>
+                    <p style="margin-bottom: 15px;">इन्होंने सामाजिक-सांस्कृतिक सिद्धांत दिया। उन्होंने कहा कि बच्चे समाज और बड़ों के साथ अंतःक्रिया (Interaction) करके सीखते हैं।</p>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                        <h5 style="color: #f72585; margin-bottom: 10px;">समीपस्थ विकास का क्षेत्र (Zone of Proximal Development - ZPD)</h5>
+                        <p style="color: #555;">वह क्षेत्र जहाँ बच्चा अकेले तो नहीं सीख सकता, लेकिन किसी की मदद से सीख सकता है। यह उसकी वास्तविक और संभावित क्षमता के बीच का अंतर है।</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 8px;">
+                        <h5 style="color: #f72585; margin-bottom: 10px;">महत्वपूर्ण अवधारणाएँ:</h5>
+                        <ul style="list-style: none; padding-left: 10px;">
+                            <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-star" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                <strong>मचान निर्माण (Scaffolding):</strong> शिक्षक द्वारा अस्थायी सहायता
+                            </li>
+                            <li style="margin-bottom: 8px; padding-left: 20px; position: relative;">
+                                <i class="fas fa-star" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                <strong>अधिक जानकार अन्य (More Knowledgeable Other - MKO):</strong> जो बच्चे से अधिक जानता हो
+                            </li>
+                            <li style="padding-left: 20px; position: relative;">
+                                <i class="fas fa-star" style="position: absolute; left: 0; color: #f72585; font-size: 0.8rem;"></i>
+                                <strong>सामाजिक संवाद (Social Dialogue):</strong> सीखने का मुख्य साधन
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Erikson Detailed -->
+                <div style="background: #fff0f5; padding: 25px; border-radius: 10px; border-left: 4px solid #ff6b9d;">
+                    <h4 style="color: #ff6b9d; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-user-friends"></i> एरिक्सन का मनोसामाजिक सिद्धांत
+                    </h4>
+                    <p style="margin-bottom: 15px;">इन्होंने जीवन को 8 चरणों में बांटा। हर चरण में एक संघर्ष होता है जिसे हल करना आवश्यक है।</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 20px;">
+                        <div>
+                            <h5 style="color: #ff6b9d; font-size: 0.95rem; margin-bottom: 5px;">1. विश्वास बनाम अविश्वास</h5>
+                            <p style="font-size: 0.85rem; color: #666;">0-1 वर्ष</p>
+                        </div>
+                        <div>
+                            <h5 style="color: #ff6b9d; font-size: 0.95rem; margin-bottom: 5px;">2. स्वायत्तता बनाम शर्म/संदेह</h5>
+                            <p style="font-size: 0.85rem; color: #666;">1-3 वर्ष</p>
+                        </div>
+                        <div>
+                            <h5 style="color: #ff6b9d; font-size: 0.95rem; margin-bottom: 5px;">3. पहल बनाम अपराधबोध</h5>
+                            <p style="font-size: 0.85rem; color: #666;">3-6 वर्ष</p>
+                        </div>
+                        <div>
+                            <h5 style="color: #ff6b9d; font-size: 0.95rem; margin-bottom: 5px;">4. परिश्रम बनाम हीनता</h5>
+                            <p style="font-size: 0.85rem; color: #666;">6-12 वर्ष</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Practice Tab -->
+        <div id="practice-tab" class="tab-content">
+            <div class="study-card">
+                <h3 style="color: #f72585; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-pen"></i> Practice Exercises - Child Development
+                </h3>
+                
+                <!-- Piaget Stages Exercise -->
+                <div style="background: #f0f4ff; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h4 style="color: #4361ee; margin-bottom: 15px;">Piaget's Stages Matching</h4>
+                    <p style="margin-bottom: 20px;">Match the stage with its correct description:</p>
+                    
+                    <div style="display: grid; gap: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e9ecef;">
+                            <div style="font-weight: 500; margin-bottom: 10px;">1. Sensorimotor Stage</div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="piaget1" value="a">
+                                    <span>0-2 years, learning through senses</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="piaget1" value="b">
+                                    <span>2-7 years, egocentric thinking</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; border: 2px solid #e9ecef;">
+                            <div style="font-weight: 500; margin-bottom: 10px;">2. Pre-operational Stage</div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="piaget2" value="a">
+                                    <span>7-11 years, logical thinking</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="radio" name="piaget2" value="b">
+                                    <span>2-7 years, symbolic play</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="margin-top: 20px;" onclick="checkPiagetQuiz()">
+                        <i class="fas fa-check"></i> Check Answers
+                    </button>
+                </div>
+                
+                <!-- Memory Trick Exercise -->
+                <div style="background: #f9f0ff; padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                    <h4 style="color: #f72585; margin-bottom: 15px;">Memory Trick Practice</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p>Recall Piaget's stages using the SPCF trick:</p>
+                        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #f72585;">S</div>
+                                <input type="text" id="stage-s" placeholder="Stage name" style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #4361ee;">P</div>
+                                <input type="text" id="stage-p" placeholder="Stage name" style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #4cc9f0;">C</div>
+                                <input type="text" id="stage-c" placeholder="Stage name" style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #2a9d8f;">F</div>
+                                <input type="text" id="stage-f" placeholder="Stage name" style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p>Freud's IES trick:</p>
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 20px 0;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #ff6b9d;">I</div>
+                                <input type="text" id="freud-i" placeholder="Stands for..." style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #4361ee;">E</div>
+                                <input type="text" id="freud-e" placeholder="Stands for..." style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: bold; color: #2a9d8f;">S</div>
+                                <input type="text" id="freud-s" placeholder="Stands for..." style="width: 100%; padding: 10px; margin-top: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary" style="margin-top: 10px;" onclick="checkMemoryTricks()">
+                        <i class="fas fa-magic"></i> Check Memory Tricks
+                    </button>
+                </div>
+                
+                <!-- Short Answer -->
+                <div style="background: #fff9e6; padding: 25px; border-radius: 10px;">
+                    <h4 style="color: #f8961e; margin-bottom: 15px;">Short Answer Questions</h4>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 500; margin-bottom: 10px;">1. Explain Vygotsky's Zone of Proximal Development (ZPD) with an example.</p>
+                        <textarea id="zpd-answer" style="width: 100%; height: 120px; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="Type your answer here..."></textarea>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <p style="font-weight: 500; margin-bottom: 10px;">2. What are the main differences between Piaget's and Vygotsky's theories?</p>
+                        <textarea id="theories-answer" style="width: 100%; height: 120px; padding: 15px; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="Type your answer here..."></textarea>
+                    </div>
+                    
+                    <button class="btn btn-outline">
+                        <i class="fas fa-save"></i> Save Answers
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div style="display: flex; justify-content: space-between; margin-top: 40px; padding-top: 30px; border-top: 1px solid #e9ecef;">
+            <a href="unit1.html" class="btn btn-outline">
+                <i class="fas fa-arrow-left"></i> Previous Unit
+            </a>
+            <div>
+                <button class="btn btn-primary" onclick="markCompleted()" style="margin-right: 15px;">
+                    <i class="fas fa-check-circle"></i> Mark as Complete
+                </button>
+                <a href="unit3.html" class="btn btn-primary">
+                    Next Unit: Learning Theories <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ChatGPT Assistant -->
+    <div class="chatgpt-assistant">
+        <button class="chatgpt-btn">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatgpt-panel">
+            <div class="panel-header">
+                <h4><i class="fas fa-robot"></i> AI Study Assistant</h4>
+                <button class="close-panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="panel-body">
+                <p>Need help with child development theories?</p>
+            </div>
+            <div class="panel-actions">
+                <a href="https://chat.openai.com" target="_blank" class="panel-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Ask About This Unit</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('piaget')">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Explain Piaget's Stages</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('vygotsky')">
+                    <i class="fas fa-comments"></i>
+                    <span>ZPD Explanation</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <h2>Deeva<span>Psychology</span></h2>
+                </div>
+                <p>Smart study approach for B.Ed. Psychology in Education</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Unit Navigation</h4>
+                <ul>
+                    <li onclick="window.location.href='unit1.html'">Unit I: Educational Psychology</li>
+                    <li onclick="window.location.href='unit2.html'">Unit II: Child Development</li>
+                    <li onclick="window.location.href='unit3.html'">Unit III: Learning Theories</li>
+                    <li onclick="window.location.href='unit4.html'">Unit IV: Intelligence</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Deeva Psychology. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function checkPiagetQuiz() {
+            const q1 = document.querySelector('input[name="piaget1"]:checked');
+            const q2 = document.querySelector('input[name="piaget2"]:checked');
+            
+            let score = 0;
+            
+            if (q1 && q1.value === 'a') {
+                score++;
+                q1.parentElement.style.color = 'green';
+            } else if (q1) {
+                q1.parentElement.style.color = 'red';
+            }
+            
+            if (q2 && q2.value === 'b') {
+                score++;
+                q2.parentElement.style.color = 'green';
+            } else if (q2) {
+                q2.parentElement.style.color = 'red';
+            }
+            
+            alert(`You scored ${score} out of 2! ${score === 2 ? 'Great job!' : 'Review the stages again.'}`);
+        }
+        
+        function checkMemoryTricks() {
+            // Check Piaget stages
+            const stageS = document.getElementById('stage-s').value.toLowerCase();
+            const stageP = document.getElementById('stage-p').value.toLowerCase();
+            const stageC = document.getElementById('stage-c').value.toLowerCase();
+            const stageF = document.getElementById('stage-f').value.toLowerCase();
+            
+            // Check Freud components
+            const freudI = document.getElementById('freud-i').value.toLowerCase();
+            const freudE = document.getElementById('freud-e').value.toLowerCase();
+            const freudS = document.getElementById('freud-s').value.toLowerCase();
+            
+            let piagetScore = 0;
+            let freudScore = 0;
+            
+            // Check Piaget
+            if (stageS.includes('sensorimotor')) piagetScore++;
+            if (stageP.includes('pre-operational') || stageP.includes('preoperational')) piagetScore++;
+            if (stageC.includes('concrete')) piagetScore++;
+            if (stageF.includes('formal')) piagetScore++;
+            
+            // Check Freud
+            if (freudI.includes('id') || freudI.includes('इदम्')) freudScore++;
+            if (freudE.includes('ego') || freudE.includes('अहम्')) freudScore++;
+            if (freudS.includes('superego') || freudS.includes('पराहम्')) freudScore++;
+            
+            // Update border colors for Piaget
+            document.getElementById('stage-s').style.borderColor = stageS.includes('sensorimotor') ? 'green' : 'red';
+            document.getElementById('stage-p').style.borderColor = (stageP.includes('pre-operational') || stageP.includes('preoperational')) ? 'green' : 'red';
+            document.getElementById('stage-c').style.borderColor = stageC.includes('concrete') ? 'green' : 'red';
+            document.getElementById('stage-f').style.borderColor = stageF.includes('formal') ? 'green' : 'red';
+            
+            // Update border colors for Freud
+            document.getElementById('freud-i').style.borderColor = (freudI.includes('id') || freudI.includes('इदम्')) ? 'green' : 'red';
+            document.getElementById('freud-e').style.borderColor = (freudE.includes('ego') || freudE.includes('अहम्')) ? 'green' : 'red';
+            document.getElementById('freud-s').style.borderColor = (freudS.includes('superego') || freudS.includes('पराहम्')) ? 'green' : 'red';
+            
+            const totalScore = piagetScore + freudScore;
+            const maxScore = 7;
+            
+            if (totalScore === maxScore) {
+                alert('🎉 Perfect! All memory tricks correct!');
+            } else {
+                alert(`You got ${totalScore} out of ${maxScore} correct. Practice the SPCF and IES tricks more!`);
+            }
+        }
+        
+        function markCompleted() {
+            localStorage.setItem('unit2_completed', 'true');
+            alert('Unit II marked as completed! Progress updated.');
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

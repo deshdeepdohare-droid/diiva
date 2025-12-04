@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Units - Deeva Psychology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Deeva<span>Psychology</span></h1>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="units.html" class="active"><i class="fas fa-book-open"></i> Study Units</a>
+                <a href="#progress"><i class="fas fa-chart-line"></i> Progress</a>
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div>
+                        <div class="user-name" id="userName">User</div>
+                        <div style="font-size: 0.8rem; color: #666;">Student</div>
+                    </div>
+                    <a href="#" onclick="logout()" style="margin-left: 10px;">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="unit-header">
+        <h1>Study Units</h1>
+        <p>Complete Psychology in Education Curriculum</p>
+    </div>
+
+    <div class="unit-content">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #212529;">All Units in Detail</h2>
+        
+        <!-- Unit I -->
+        <div class="study-card" style="border-left: 5px solid #4361ee;">
+            <div class="card-title">
+                <i class="fas fa-psychology" style="color: #4361ee;"></i>
+                <h3 style="color: #4361ee;">Unit I: शिक्षा मनोविज्ञान (Educational Psychology)</h3>
+            </div>
+            
+            <p><strong>Topics Covered:</strong></p>
+            <ul style="margin: 15px 0 15px 20px; color: #555;">
+                <li>Meaning, Nature & Importance of Educational Psychology</li>
+                <li>Branches of Psychology (Cognitive, Behavioral, Developmental)</li>
+                <li>Research Methods (Case Study, Experimental)</li>
+                <li>Memory Trick: "PCB" - Psychology, Child, Behavior</li>
+            </ul>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <div>
+                    <span style="color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-clock"></i> 3 hours
+                    </span>
+                    <span style="margin-left: 20px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-star"></i> 12 Key Points
+                    </span>
+                </div>
+                <a href="unit1.html" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Study Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Unit II -->
+        <div class="study-card" style="border-left: 5px solid #f72585;">
+            <div class="card-title">
+                <i class="fas fa-child" style="color: #f72585;"></i>
+                <h3 style="color: #f72585;">Unit II: बाल विकास के सिद्धांत (Child Development Theories)</h3>
+            </div>
+            
+            <p><strong>Topics Covered:</strong></p>
+            <ul style="margin: 15px 0 15px 20px; color: #555;">
+                <li>Growth vs Development, Factors affecting development</li>
+                <li>Piaget's Cognitive Development (SPCF trick)</li>
+                <li>Freud's Psychoanalytic Theory (IES trick)</li>
+                <li>Vygotsky's Sociocultural Theory</li>
+                <li>Erikson's Psychosocial Theory</li>
+            </ul>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <div>
+                    <span style="color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-clock"></i> 4 hours
+                    </span>
+                    <span style="margin-left: 20px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-star"></i> 15 Key Points
+                    </span>
+                </div>
+                <a href="unit2.html" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Study Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Unit III -->
+        <div class="study-card" style="border-left: 5px solid #4cc9f0;">
+            <div class="card-title">
+                <i class="fas fa-graduation-cap" style="color: #4cc9f0;"></i>
+                <h3 style="color: #4cc9f0;">Unit III: सीखने के सिद्धांत (Learning Theories)</h3>
+            </div>
+            
+            <p><strong>Topics Covered:</strong></p>
+            <ul style="margin: 15px 0 15px 20px; color: #555;">
+                <li>Behaviorist Theories (Thorndike, Pavlov, Skinner)</li>
+                <li>Social Learning Theory (Bandura)</li>
+                <li>Maslow's Hierarchy of Needs</li>
+                <li>Learning Environment & Motivation</li>
+                <li>Animal Experiments & Memory Tricks</li>
+            </ul>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <div>
+                    <span style="color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-clock"></i> 3.5 hours
+                    </span>
+                    <span style="margin-left: 20px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-star"></i> 18 Key Points
+                    </span>
+                </div>
+                <a href="unit3.html" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Study Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Unit IV -->
+        <div class="study-card" style="border-left: 5px solid #f8961e;">
+            <div class="card-title">
+                <i class="fas fa-users" style="color: #f8961e;"></i>
+                <h3 style="color: #f8961e;">Unit IV: बुद्धि और व्यक्तित्व (Intelligence & Personality)</h3>
+            </div>
+            
+            <p><strong>Topics Covered:</strong></p>
+            <ul style="margin: 15px 0 15px 20px; color: #555;">
+                <li>Gardner's Multiple Intelligence Theory</li>
+                <li>Emotional Intelligence</li>
+                <li>Creativity Components (FFO trick)</li>
+                <li>Learning Disabilities (Dyslexia, Dysgraphia)</li>
+                <li>IQ Formula: MA/CA × 100</li>
+                <li>Socialization & Leadership Styles</li>
+            </ul>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                <div>
+                    <span style="color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-clock"></i> 3 hours
+                    </span>
+                    <span style="margin-left: 20px; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-star"></i> 14 Key Points
+                    </span>
+                </div>
+                <a href="unit4.html" class="btn btn-primary">
+                    <i class="fas fa-play"></i> Study Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Exam Master Tip -->
+        <div style="background: linear-gradient(135deg, #fff9e6, #fff); padding: 30px; border-radius: 15px; margin-top: 40px; border-left: 5px solid #f8961e;">
+            <div style="display: flex; align-items: flex-start; gap: 20px;">
+                <i class="fas fa-trophy" style="font-size: 2rem; color: #f8961e;"></i>
+                <div>
+                    <h3 style="color: #f8961e; margin-bottom: 15px;">परीक्षा के लिए "मास्टर टिप"</h3>
+                    <p style="color: #555; margin-bottom: 10px;">जब भी बी.एड के उत्तर लिखें, तो <strong>"परिभाषा → सिद्धांत/प्रकार → शैक्षिक निहितार्थ (Educational Implication)"</strong> का फ्लो रखें।</p>
+                    <p style="color: #666; font-style: italic;">उदाहरण: स्किनर के सिद्धांत का उपयोग करके बच्चों को होमवर्क पूरा करने पर 'Very Good' देना।</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ChatGPT Assistant -->
+    <div class="chatgpt-assistant">
+        <button class="chatgpt-btn">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatgpt-panel">
+            <div class="panel-header">
+                <h4><i class="fas fa-robot"></i> AI Study Assistant</h4>
+                <button class="close-panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="panel-body">
+                <p>Need help with psychology concepts? Get explanations, examples, and study tips.</p>
+            </div>
+            <div class="panel-actions">
+                <a href="https://chat.openai.com" target="_blank" class="panel-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Open ChatGPT</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('piaget')">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Explain Piaget's Theory</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('freud')">
+                    <i class="fas fa-chess-board"></i>
+                    <span>Freud's Theory Help</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <h2>Deeva<span>Psychology</span></h2>
+                </div>
+                <p>Smart study approach for B.Ed. Psychology in Education</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Study Units</h4>
+                <ul>
+                    <li onclick="window.location.href='unit1.html'">Unit I: Educational Psychology</li>
+                    <li onclick="window.location.href='unit2.html'">Unit II: Child Development</li>
+                    <li onclick="window.location.href='unit3.html'">Unit III: Learning Theories</li>
+                    <li onclick="window.location.href='unit4.html'">Unit IV: Intelligence</li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Study Tools</h4>
+                <ul>
+                    <li>Memory Tricks</li>
+                    <li>Key Points</li>
+                    <li>Practice Tests</li>
+                    <li>AI Assistant</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Deeva Psychology. All rights reserved. | B.Ed. Exam Preparation Tool</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

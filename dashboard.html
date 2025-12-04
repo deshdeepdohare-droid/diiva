@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Deeva Psychology</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>Deeva<span>Psychology</span></h1>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="nav-links">
+                <a href="dashboard.html" class="active"><i class="fas fa-home"></i> Dashboard</a>
+                <a href="units.html"><i class="fas fa-book-open"></i> Study Units</a>
+                <a href="#progress"><i class="fas fa-chart-line"></i> Progress</a>
+                <div class="user-info">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div>
+                        <div class="user-name" id="userName">User</div>
+                        <div style="font-size: 0.8rem; color: #666;">Student</div>
+                    </div>
+                    <a href="#" onclick="logout()" style="margin-left: 10px;">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="welcome-message" id="welcomeMessage">Welcome to Deeva!</h1>
+            <p class="welcome-text">Let's study Psychology in Education together. Access smart study materials, memory tricks, and AI assistance.</p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+                <a href="units.html" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> Start Learning
+                </a>
+                <a href="#units" class="btn btn-outline">
+                    <i class="fas fa-graduation-cap"></i> Browse Units
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-grid">
+        <!-- Quick Stats -->
+        <div class="dashboard-card">
+            <div class="card-header">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Study Progress</h3>
+            </div>
+            <div class="card-body">
+                <div style="margin: 20px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Overall Progress</span>
+                        <span id="overallProgress">25%</span>
+                    </div>
+                    <div style="height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden;">
+                        <div class="progress-fill" data-progress="25" style="width: 0%; height: 100%; background: linear-gradient(135deg, #4361ee, #3a0ca3); border-radius: 5px;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                    <div>
+                        <div style="font-size: 0.9rem; color: #666;">Units Completed</div>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #4361ee;">1/4</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.9rem; color: #666;">Study Time</div>
+                        <div style="font-size: 1.8rem; font-weight: bold; color: #4361ee;">3.5h</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Today's Goal -->
+        <div class="dashboard-card">
+            <div class="card-header">
+                <i class="fas fa-trophy"></i>
+                <h3>Today's Goal</h3>
+            </div>
+            <div class="card-body">
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-check-circle" style="color: #4cc9f0;"></i>
+                        <span>Review Unit I Key Points</span>
+                    </li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-circle" style="color: #f8961e;"></i>
+                        <span>Study Piaget's Stages (SPCF)</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <i class="far fa-circle" style="color: #adb5bd;"></i>
+                        <span>Practice Memory Tricks</span>
+                    </li>
+                </ul>
+                <button class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-check"></i> Mark as Complete
+                </button>
+            </div>
+        </div>
+        
+        <!-- Study Tips -->
+        <div class="dashboard-card">
+            <div class="card-header">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Smart Study Tips</h3>
+            </div>
+            <div class="card-body">
+                <div style="background: #f0f4ff; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h4 style="color: #4361ee; margin-bottom: 10px;">Exam Master Tip</h4>
+                    <p>Always follow: <strong>Definition → Theory/Types → Educational Implications</strong> in your answers.</p>
+                </div>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                        <i class="fas fa-star" style="color: #f8961e; position: absolute; left: 0;"></i>
+                        Use memory tricks like "SPCF" for Piaget
+                    </li>
+                    <li style="margin-bottom: 10px; padding-left: 20px; position: relative;">
+                        <i class="fas fa-star" style="color: #f8961e; position: absolute; left: 0;"></i>
+                        Practice with our AI assistant
+                    </li>
+                    <li style="padding-left: 20px; position: relative;">
+                        <i class="fas fa-star" style="color: #f8961e; position: absolute; left: 0;"></i>
+                        Study in 45-minute intervals
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Units -->
+    <section id="units" style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+        <h2 style="text-align: center; margin-bottom: 40px; color: #212529;">Quick Access Units</h2>
+        
+        <div class="unit-grid">
+            <a href="unit1.html" class="unit-card">
+                <div class="unit-icon">
+                    <i class="fas fa-psychology"></i>
+                </div>
+                <h4>Unit I</h4>
+                <h5>शिक्षा मनोविज्ञान</h5>
+                <p>Educational Psychology Basics, Branches & Methods</p>
+                <div class="unit-meta">
+                    <span class="unit-duration">
+                        <i class="fas fa-clock"></i> 3 hours
+                    </span>
+                    <span class="unit-status">Completed</span>
+                </div>
+            </a>
+            
+            <a href="unit2.html" class="unit-card">
+                <div class="unit-icon">
+                    <i class="fas fa-child"></i>
+                </div>
+                <h4>Unit II</h4>
+                <h5>बाल विकास के सिद्धांत</h5>
+                <p>Child Development Theories - Piaget, Freud, Vygotsky</p>
+                <div class="unit-meta">
+                    <span class="unit-duration">
+                        <i class="fas fa-clock"></i> 4 hours
+                    </span>
+                    <span class="unit-status" style="background: #f8961e;">In Progress</span>
+                </div>
+            </a>
+            
+            <a href="unit3.html" class="unit-card">
+                <div class="unit-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>Unit III</h4>
+                <h5>सीखने के सिद्धांत</h5>
+                <p>Learning Theories - Behaviorism, Social Learning, Motivation</p>
+                <div class="unit-meta">
+                    <span class="unit-duration">
+                        <i class="fas fa-clock"></i> 3.5 hours
+                    </span>
+                    <span class="unit-status" style="background: #adb5bd;">Not Started</span>
+                </div>
+            </a>
+            
+            <a href="unit4.html" class="unit-card">
+                <div class="unit-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Unit IV</h4>
+                <h5>बुद्धि और व्यक्तित्व</h5>
+                <p>Intelligence & Personality - Gardner, Creativity, IQ</p>
+                <div class="unit-meta">
+                    <span class="unit-duration">
+                        <i class="fas fa-clock"></i> 3 hours
+                    </span>
+                    <span class="unit-status" style="background: #adb5bd;">Not Started</span>
+                </div>
+            </a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="units.html" class="btn btn-outline">
+                <i class="fas fa-book"></i> View All Study Materials
+            </a>
+        </div>
+    </section>
+
+    <!-- ChatGPT Assistant -->
+    <div class="chatgpt-assistant">
+        <button class="chatgpt-btn">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatgpt-panel">
+            <div class="panel-header">
+                <h4><i class="fas fa-robot"></i> AI Study Assistant</h4>
+                <button class="close-panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="panel-body">
+                <p>Need help with psychology concepts? Get explanations, examples, and study tips.</p>
+            </div>
+            <div class="panel-actions">
+                <a href="https://chat.openai.com" target="_blank" class="panel-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Open ChatGPT</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('piaget')">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Explain Piaget's Theory</span>
+                </a>
+                <a href="#" class="panel-link" onclick="openChatGPT('learning')">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Learning Theories Help</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <h2>Deeva<span>Psychology</span></h2>
+                </div>
+                <p>Smart study approach for B.Ed. Psychology in Education</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li onclick="window.location.href='dashboard.html'">Dashboard</li>
+                    <li onclick="window.location.href='units.html'">Study Units</li>
+                    <li>Progress Tracking</li>
+                    <li>AI Assistant</li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Study Tools</h4>
+                <ul>
+                    <li>Memory Tricks</li>
+                    <li>Key Points</li>
+                    <li>Practice Tests</li>
+                    <li>Exam Tips</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2023 Deeva Psychology. All rights reserved. | B.Ed. Exam Preparation Tool</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
